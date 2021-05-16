@@ -1,0 +1,226 @@
+{
+    "version": "0.1",
+    "pageContent": 
+	{
+        "_comments": "object that contains data for page labels, buttons, etc.",
+        "navItems": 
+		{
+            "_common": 
+			{
+                "buttonBackToGallery": 
+				{
+                    "name": "Back To Gallery",
+					"method": "backToGallery()",
+					"idName": "backToGallery"	
+                },
+                "buttonStartTutorial": 
+				{
+                    "name": "Start Tutorial",
+					"method": "startTutorialFromDetailsScreen()",
+					"idName": "startTutorial"
+                },
+				"buttonViewDetails": 
+				{
+                    "name": "View Details",
+					"method": "viewDetails()",
+					"idName": "stepsViewDetails"	
+                }
+            }
+        }
+    },
+    "tutorial": 
+	{
+        "_common": 
+		{
+            "name": "Getting Started - Cloning a Github repository in the Toolkit",			
+            "shortDescription": "Learn how to clone a repository from Github which contains an IBM App Connect Enterprise Toolkit project.",
+            "durationText": "This tutorial takes approximately",
+            "durationTime": "10 minutes",
+            "_resourceToOpenComment": "The ID of the first resource to open when the user imports the tutorial. Resource IDs are defined in the repo_metadata.json Tutorials listing on ot4i.",
+            "resourceToOpen": "ExampleRouterFlow",
+            "helpLink": 
+			{
+                "text": "IBM Knowledge Center",
+           		"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.ace.home.doc/help_home.htm"
+            }
+        },
+        "pageDetails": 
+		{
+            "topicsName": "Tutorial topics",
+            "_topicListComment": "A short list of product concepts or tasks demonstrated by this tutorial",
+            "topicList": 
+			[
+                {
+                    "title": "Cloning a Github repository"
+                }				
+            ],
+            "outcomesName": "Learning outcomes",
+            "_outcomesComment": "A description of what the user will have learned or accomplished by running this tutorial.",
+            "outcomeList": 
+			[
+                {
+                    "title": "The IBM App Connect Enterprise Toolkit can be connected to a standard GitHub account from https://github.com or an Enterprise GitHub account"					
+                },
+				{
+                    "title": "After connecting to Github, the tutorial will clone a repository containing IBM App Connect Enterprise Toolkit projects." 
+                }
+            ],
+            "summary": 
+			{
+                "overviewName": "Overview",
+                "_overviewComment": "A short description of what happens in this tutorial, and an optional short explanation of the ACE concepts used in this tutorial if necessary for context. What background knowledge must the user have for this to make sense?",
+                "sections": 
+				[
+					 {
+                        "section": "This tutorial assumes you are familiar with the basic operations of GitHub version control. You are encouraged to begin by exploring https://github.com or your company's Enterprise GitHub capabilities before embarking on the tutorial. Note that a public repository on the standard GitHub website allows you to create public repositories, and it is also possible to create private repositories if you have a paid account.  Your company may also have its own Enterprise GitHub installation. To make the tutorial as accessible as possible, it addresses an example GitHub public repository which you can connect to and clone, but if you wish to go beyond the tutorial and push your own committed changes then you will need to research creating your own organization and repository."
+					 },
+					 {
+                        "section": "The tutorial describes how to clone a repository which contains a single IBM App Connect Enterprise application. You can explore the files which make up the application using a web browser to view it on the GitHub website at https://github.com/ot4i/mygitrepo"					
+					 }
+                ]
+            },
+			"helpLinks": 
+			{
+				"_helpLinksComment": "Helplinks that have a type:web attribute are rendered as web links. Otherwise, links are assumed to be to embedded Help topics in the Knowledge Center.",
+				"title": "Find out more",
+				"details": 
+				[
+					{
+						"title": "Knowledge Center link to ",
+						"description": "Developing an application",
+						"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bi12002_.htm",
+						"type": "web"
+					}
+				]
+			}
+        },
+        "pageSteps": 
+		{
+            "create": 
+			{
+                "overview": 
+				{
+                    "name": "Create",
+                    "heading": "Import a project",
+                    "_createComment": "A description of what will happen when the user clicks Import.",
+                    "sections": 
+					[
+                        {
+                            "section": "There are no creation steps for this tutorial! The purpose of this tutorial will be to connect to a Git repository and clone it by following the instructions in the <b>Prepare</b> section, and then view the results in the Application Development perspective of the Toolkit using the instructions in the <b>Run</b> section. Please move straight to the <b>Prepare</b> tab and we will begin!"
+						}
+					 ]
+				 },
+                "helpLinks": 
+				{
+                    "title": "Find out more",
+                    "details": 
+					[
+                        {
+                            "title": "Knowledge Center link to ",
+                            "description": "Developing integration solutions by using applications",
+                            "link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bi12002_.htm",
+							"type": "web"
+                        }
+                    ]
+                },
+                "actions": 
+				{
+                    "title": "Create Actions",
+                    "details": 
+					[
+                        {
+                            "name": "Import",
+                            "method": "importArtifacts()"
+                        }
+                    ]
+                }
+            },
+            "prepare": 
+			{
+                "overview": 
+				{
+                    "name": "Prepare",
+                    "heading": "",
+                    "_prepareComment": "A description of what just happened when the user clicked Import, and what will happen when the user clicks Deploy.",
+                    "sections": 
+		     [				 
+				  {
+                "section":"<b>Connect the IBM App Connect Enterprise Toolkit to a GitHub repository</b>",
+                "steps":{
+                  "type":"ordered",
+                  "details":[
+                    {						
+                      "details": "In the Toolkit, go to the menu <b>Window > Perspective > Open Perspective > Other</b> and in the resulting dialog, select the <b>Git</b> perspective and click Open."
+					},					
+					{						
+                      "details": "On the left side of the Toolkit screen you should see links to add a repository to the view of Git Repositories in several ways:<br><b>Add an existing local Git Repository</b><br><b>Clone a Git Repository</b><br><b>Create a new local Git repository</b><br>  In this tutorial we will choose to select the option to <b>Clone a Git repository</b>"
+					},
+					{						
+                      "details": "It is assumed you have your own Git repository already, but just in case you don't, the following instructions describe how you can clone an existing Git repository from the Open Technologies for Integration organization (http://ot4i.github.io/). This repo holds an example IBM App Connect Enterprise application. You won't be authorized to make changes to the application (which is preserved in a known state in order to allow anyone following this tutorial to follow these steps!) but you will be able to clone a copy of the application to your machine. Fill out the fields to describe the Git Repository which you would like to clone:<br><br><b>URI:</b> <code>https://git@github.com/ot4i/mygitrepo.git</code><br><b>Host:</b> <code>github.com</code><b>Repository path:</b> <code>ot4i/mygitrepo.git</code><b>Protocol:</b> <code>https</code><b>User:</b> <code>Leave this blank</code><b>Password:</b> <code>Leave this blank</code><br>Click Next."
+					},
+					{						
+                      "details": "The <b>Branch Selection</b> page will be displayed which enables you to select which branches to clone from the repository. In our example there is a single branch named <b>main</b>, whose checkbox should already be selected. Leave all the settings on this page the way they are, and click Next."
+					},
+					{						
+                      "details": "The <b>Local Destination</b> page will be displayed which configures the local storage location for the repository on your machine. You can stick with the suggested directory location or make your own choice, for example <code>C:\\Users\\YourUserName\\git\\mygitrepo</code>. Select the option to <b>Import all existing Eclipse projects after clone finishes</b>. This option will not be selected by default, but it is stronly recommended otherwise you won't see anything added to your workspace once the clone finishes! Click the Finish button."
+					},
+					{						
+                      "details": "Now move to the <b>Run</b> section of the tutorial where we will explore the results of cloning the repository."
+					}
+				  ]
+				}
+				  }
+             ]
+                },
+                "helpLinks": 
+				{
+                }
+            },
+            "run": 
+			{
+                "overview": 
+				{
+                    "name": "Run",
+                    "heading": "",
+                    "_runComment": "The full steps for the user to run through the tutorial. Use 'sections' to render paragraphs, 'steps' with a type of 'ordered' or 'unordered' to render HTML lists, and 'substeps' to render nested lists.",
+                "sections":[                            
+                            {
+                                "section": "<h4>Explore the results of cloning the GitHub repository in the Toolkit",
+                                "steps": {
+                                    "type": "ordered",
+                                    "details": [                                      
+                                    	{
+                                        "details": "Still in the Git perspective of the IBM App Connect Enterprise Toolkit, you should now see a tree view of the mygitrepo repository in the view of Git Repositories in the top left corner of the Toolkit. In the tree view underneath <b>mygitrepo</b> you should see children like <b>Branches</b>, <b>Tags</b>, <b>References</b>, <b>Remotes</b> and <b>Working Tree</b>. Expand <b>Working Tree</b> and locate the <b>MyExampleApplication</b> folder. Within this folder you should see the application's <b>.project</b> and <b>application.descriptor</b> files but we will focus on the message flow in the application which is named <b>MyExampleMessageFlow.msgflow</b>. Double click the message flow file and it will open and display an HTTP Input node wired directly to an HTTP Reply node."
+                                        },
+										{
+                                        "details": "Go to the menu <b>Window > Perspective > Open Perspective > Other</b> and in the resulting dialog, select the <b>Integration Development (default)</b> perspective and click Open. In the Application Development view in the top left corner, you should see the project <b>MyExampleApplication</b>. The application will have an overlaid icon showing its associateion with a github repository. After the project name, the name of the git repository will be shown in square brackets."
+										},
+										{
+                                        "details": "Congratulations, you have successfully connected the IBM App Connect Enterprise Toolkit to a Git repository! If you would like to fully explore the capabilities in this area, you are encouraged to now interact with a repository where you have authority to add and commit changes."
+										}
+										
+                                      ]
+                                  }                            
+                        },			
+						{
+			    			"section": "This tutorial has shown how to clone a repository from Github which contains an IBM App Connect Enterprise Toolkit project."
+						}
+                    ]
+                },
+                "helpLinks": 
+				{
+                    "title": "Find out more",
+                    "details": 
+					[                        
+                        {
+                            "title": "Knowledge Center link to ",
+                            "description": "Unit Testing your message flow",
+                            "link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/rt26110_.htm",
+							"type": "web"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
