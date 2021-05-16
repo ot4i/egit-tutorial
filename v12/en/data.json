@@ -72,10 +72,7 @@
                 "sections": 
 				[
 					 {
-                        "section": "This tutorial assumes you are familiar with the basic operations of GitHub version control. You are encouraged to begin by exploring https://github.com or your company's Enterprise GitHub capabilities before embarking on the tutorial. Note that a public repository on the standard GitHub website allows you to create public repositories, and it is also possible to create private repositories if you have a paid account.  Your company may also have its own Enterprise GitHub installation. To make the tutorial as accessible as possible, it addresses an example GitHub public repository which you can connect to and clone, but if you wish to go beyond the tutorial and push your own committed changes then you will need to research creating your own organization and repository."
-					 },
-					 {
-                        "section": "The tutorial describes how to clone a repository which contains a single IBM App Connect Enterprise application. You can explore the files which make up the application using a web browser to view it on the GitHub website at https://github.com/ot4i/mygitrepo"					
+                        "section": "This tutorial assumes you are familiar with the basic operations of GitHub version control. You are encouraged to begin by exploring https://github.com or your company's Enterprise GitHub capabilities before embarking on the tutorial. Note that a public repository on the standard GitHub website allows you to create public repositories, and it is also possible to create private repositories if you have a paid account.  Your company may also have its own Enterprise GitHub installation. To make the tutorial as accessible as possible, it addresses an example GitHub public repository which you can connect to and clone, but if you wish to go beyond the tutorial and push your own committed changes then you will need to research creating your own organization and repository. The tutorial describes how to clone a repository which contains a single IBM App Connect Enterprise application. You can explore the files which make up the application using a web browser to view it on the GitHub website at https://github.com/ot4i/mygitrepo"					
 					 }
                 ]
             },
@@ -101,7 +98,7 @@
                 "overview": 
 				{
                     "name": "Create",
-                    "heading": "Import a project",
+                    "heading": "",
                     "_createComment": "A description of what will happen when the user clicks Import.",
                     "sections": 
 					[
@@ -120,17 +117,6 @@
                             "description": "Developing integration solutions by using applications",
                             "link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bi12002_.htm",
 							"type": "web"
-                        }
-                    ]
-                },
-                "actions": 
-				{
-                    "title": "Create Actions",
-                    "details": 
-					[
-                        {
-                            "name": "Import",
-                            "method": "importArtifacts()"
                         }
                     ]
                 }
