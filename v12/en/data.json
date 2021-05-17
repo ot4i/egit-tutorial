@@ -32,8 +32,8 @@
 	{
         "_common": 
 		{
-            "name": "Getting Started - Cloning a Github repository in the Toolkit",			
-            "shortDescription": "Learn how to clone a repository from Github which contains an IBM App Connect Enterprise Toolkit project.",
+            "name": "Getting Started - Cloning a GitHub repository in the Toolkit",			
+            "shortDescription": "Learn how to clone a repository from GitHub which contains an IBM App Connect Enterprise Toolkit project.",
             "durationText": "This tutorial takes approximately",
             "durationTime": "10 minutes",
             "_resourceToOpenComment": "The ID of the first resource to open when the user imports the tutorial. Resource IDs are defined in the repo_metadata.json Tutorials listing on ot4i.",
